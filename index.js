@@ -4,19 +4,19 @@
   let failed;
   let isRunning;
   const DEST_LIST = [
-    'cdn.jsdelivr.net',
-    'fastly.jsdelivr.net',
-    'gcore.jsdelivr.net',
-    'cdn.zenless.top',
-    'testingcf.jsdelivr.net',
-    'test1.jsdelivr.net'
+    'raw.githubusercontent.com',
+    'raw.fastgit.org',
+    'raw.staticdn.net',
+    'rawgit.marisa.ml',
+    'raw.sakuya.ga',
+    'rawgit1.marisa.ml'
   ];
   const PREFIX = '//';
   const SOURCE = DEST_LIST[0];
   const starTime = Date.now();
   const TIMEOUT = 2000;
-  const STORE_KEY = 'jsdelivr-auto-fallback';
-  const TEST_PATH = '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?';
+  const STORE_KEY = 'gitraw-auto-fallback';
+  const TEST_PATH = '/kubernetes/kubernetes/master/README.md';
   const shouldReplace = (text) => text && text.includes(PREFIX + SOURCE);
   const replace = (text) => text.replace(PREFIX + SOURCE, PREFIX + fastNode);
   const setTimeout = window.setTimeout;
